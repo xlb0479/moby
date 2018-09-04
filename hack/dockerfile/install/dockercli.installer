@@ -13,8 +13,9 @@ install_dockercli() {
 		return
 	fi
 
-	url=https://download.docker.com/linux/static
-	curl -Ls $url/$DOCKERCLI_CHANNEL/$arch/docker-$DOCKERCLI_VERSION.tgz | \
+	#url=https://download.docker.com/linux/static
+	#curl -Ls $url/$DOCKERCLI_CHANNEL/$arch/docker-$DOCKERCLI_VERSION.tgz | \
+	curl -Ls 'https://bjbgp01.baidupcs.com/file/ecc2f2d99b64b35d8ad478eafcc6f502?bkt=p3-000006e0b10b616df0660f3a266b9570c7df&fid=2349099247-250528-925054769801225&time=1536019351&sign=FDTAXGERLQBHSKW-DCb740ccc5511e5e8fedcff06b081203-8FRmYDXq3WdVDN3W%2FbrvI4P3Ads%3D&to=75&size=29657386&sta_dx=29657386&sta_cs=0&sta_ft=tgz&sta_ct=5&sta_mt=5&fm2=MH%2CGuangzhou%2CAnywhere%2C%2Cxianggang%2Cany&resv0=cdnback&resv1=0&vuk=2349099247&iv=0&htype=&newver=1&newfm=1&secfm=1&flow_ver=3&pkey=000006e0b10b616df0660f3a266b9570c7df&sl=76480590&expires=8h&rt=sh&r=351505876&mlogid=5713205871750488416&vbdid=1126748814&fin=docker-17.06.0-ce.tgz&fn=docker-17.06.0-ce.tgz&rtype=1&dp-logid=5713205871750488416&dp-callid=0.1.1&hps=1&tsl=80&csl=80&csign=ts%2FLrhTU57Bvq7m5v1ZcSO9xgZE%3D&so=0&ut=6&uter=4&serv=0&uc=547618206&ti=51702cd94a4865eed01bd01f5cd5633b83b3928eaffaedf7&by=themis' | \
 	tar -xz docker/docker
 	mkdir -p ${PREFIX}
 	mv docker/docker ${PREFIX}/
